@@ -19,7 +19,7 @@ void parseFile(const string& filename, const char& separator = '\t') {
     vector<string> headers;
     vector<vector<double>> data;
 
-    // Читаем заголовки
+    // Р§С‚РµРЅРёРµ Р·Р°РіРѕР»РѕРІРєРѕРІ 
     if (getline(file, line)) {
         istringstream headerStream(line);
         string header;
@@ -30,7 +30,7 @@ void parseFile(const string& filename, const char& separator = '\t') {
         throw runtime_error("Error: File is empty.");
     }
     
-    // Читаем данные
+    // Р§С‚РµРЅРёРµ РґР°РЅРЅС‹С…
     while (getline(file, line)) {
         istringstream dataStream(line);
         vector<double> row;
@@ -50,7 +50,7 @@ void parseFile(const string& filename, const char& separator = '\t') {
         data.push_back(row);
     }
 
-    // Вывод содержимого
+    // Р’С‹РІРѕРґ РґР°РЅРЅС‹С…
     cout << "Headers:" << endl;
     for (string& header : headers) {
         cout << header << separator;
